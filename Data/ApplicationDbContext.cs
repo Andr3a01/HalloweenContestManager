@@ -5,7 +5,7 @@ namespace HalloweenContestManager.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<UserAccount> UserAccounts;
+        public DbSet<UserAccount> UserAccounts { get; set; } = null!;
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }

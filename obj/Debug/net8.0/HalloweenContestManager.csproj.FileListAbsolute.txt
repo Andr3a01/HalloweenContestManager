@@ -161,7 +161,6 @@ C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\Hallowee.1848668D.Up2Date
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\HalloweenContestManager.dll
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\refint\HalloweenContestManager.dll
@@ -171,3 +170,5 @@ C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\HalloweenContestManager.sourcelink.json
+C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

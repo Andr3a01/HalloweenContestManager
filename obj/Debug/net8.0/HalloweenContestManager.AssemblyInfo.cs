@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HalloweenContestManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52bdff322701206174aa86c4a4bea132f960fed7")]
 [assembly: System.Reflection.AssemblyProductAttribute("HalloweenContestManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HalloweenContestManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

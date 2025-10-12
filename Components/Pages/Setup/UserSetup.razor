@@ -1,0 +1,15 @@
+﻿@page "/user-setup"
+@using HalloweenContestManager.Modelds.ViewModels
+@attribute [Authorize("Administrator")]
+
+@inject ApplicationDbContext appContext
+
+@* <MudDataGrid Items="UserList">
+    <PropertyColumn Property="@(p => p.Id)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.UserName)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.Role)" Sortable="true" />
+</MudDataGrid>
+ *@
+@code {
+    private IQueryable<UserAccount> UserList => appContext.UserAccounts;
+}

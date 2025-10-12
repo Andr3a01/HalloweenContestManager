@@ -1,0 +1,7 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\favicon.png
+C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\app.css
+C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\bootstrap\bootstrap.min.css
+C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\bootstrap\bootstrap.min.css.map

@@ -1,20 +1,3 @@
 ﻿@page "/"
 @attribute [Authorize()]
 <PageTitle>Home</PageTitle>
-
-<div class="row">
-    <div class="col-12">
-        <h2 class="fw-bolder"> Welcome </h2>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <AuthorizeView Roles="*">
-                    <Authorized>
-                       <span> Logged in as <b>@context.User.Identity.Name</b>. <a href="/logout">Logout</a></span>
-                    </Authorized>
-                </AuthorizeView>
-            </div>
-        </div>
-    </div>
-</div>

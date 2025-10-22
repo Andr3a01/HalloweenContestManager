@@ -1,15 +1,41 @@
 ﻿@page "/user-setup"
 @using HalloweenContestManager.Modelds.ViewModels
-@attribute [Authorize("Administrator")]
+@using Microsoft.EntityFrameworkCore
+@attribute [Authorize(Roles = "Administrator")]
 
 @inject ApplicationDbContext appContext
-
-@* <MudDataGrid Items="UserList">
-    <PropertyColumn Property="@(p => p.Id)" Sortable="true" />
-    <PropertyColumn Property="@(p => p.UserName)" Sortable="true" />
-    <PropertyColumn Property="@(p => p.Role)" Sortable="true" />
-</MudDataGrid>
+@* <div class="page-size-chooser">
+    Items per page:
+    <select @bind="@pagination.ItemsPerPage">
+        <option>5</option>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+    </select>
+</div>
  *@
+
+<div>
+    <QuickGrid Items="@Users" ItemKey="@(x => x.Id)" Class="table table-striped m-0">
+        <PropertyColumn Property="@(p => p.Id)" Title="Id" Sortable="true"/>
+        <PropertyColumn Property="@(p => p.UserName)" Title="UserName" Sortable="true" />
+        <PropertyColumn Property="@(p => p.Role)" Title="Role" Sortable="true" />
+    </QuickGrid>
+    @* <Paginator State="@pagination" /> *@
+</div>
 @code {
-    private IQueryable<UserAccount> UserList => appContext.UserAccounts;
+    // PaginationState pagination = new PaginationState { ItemsPerPage = 5};
+    private IQueryable<UserAccount> Users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        Users =  appContext.UserAccounts.AsQueryable();
+    }
+
 }

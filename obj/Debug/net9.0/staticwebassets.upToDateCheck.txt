@@ -1,9 +1,0 @@
-wwwroot\app.css
-wwwroot\bootstrap\bootstrap.min.css
-wwwroot\bootstrap\bootstrap.min.css.map
-wwwroot\favicon.png
-wwwroot\Scripts\site.js
-C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\app.css
-C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\bootstrap\bootstrap.min.css
-C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\bootstrap\bootstrap.min.css.map
-C:\Users\asharoubim.TWINHELIX\PersonalDevelops\Halloween\HalloweenContestManager\wwwroot\Scripts\site.js

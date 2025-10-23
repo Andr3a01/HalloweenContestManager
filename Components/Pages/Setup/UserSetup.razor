@@ -16,7 +16,7 @@
  *@
 
 <div>
-    <QuickGrid Items="@Users" ItemKey="@(x => x.Id)" Class="table table-striped m-0">
+    <QuickGrid Items="@Users" ItemKey="@(x => x.Id)" Class="table m-0 table-responsive">
         <PropertyColumn Property="@(p => p.Id)" Title="Id" Sortable="true"/>
         <PropertyColumn Property="@(p => p.UserName)" Title="UserName" Sortable="true" />
         <PropertyColumn Property="@(p => p.Role)" Title="Role" Sortable="true" />

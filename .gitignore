@@ -108,3 +108,9 @@
 /obj/HalloweenContestManager.csproj.nuget.g.targets
 /obj/project.assets.json
 /obj/project.nuget.cache
+/obj/Debug/net8.0/HalloweenContestManager.AssemblyInfo.cs
+/obj/Debug/net8.0/HalloweenContestManager.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/HalloweenContestManager.assets.cache
+/obj/Debug/net8.0/HalloweenContestManager.csproj.AssemblyReference.cache
+/obj/Debug/net8.0/HalloweenContestManager.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net8.0/rpswa.dswa.cache.json

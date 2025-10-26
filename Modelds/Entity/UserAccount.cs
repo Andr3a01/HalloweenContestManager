@@ -19,8 +19,15 @@ namespace HalloweenContestManager.Modelds.Entity
         [MaxLength(100)]
         public string? Password { get; set; }
 
-        [Column("ROLE")]
-        [MaxLength(20)]
-        public string? Role { get; set; }
+        [Column("ACTIVE")]
+        public bool Active { get; set; } = true;
+
+        [Column("LOCKED_OUT")]
+        public bool LockedOut { get; set; } = false;
+
+        public ICollection<Role> Roles { get; set; }
+        public UserAccount() { 
+            Roles = new HashSet<Role>();
+        }
     }
 }

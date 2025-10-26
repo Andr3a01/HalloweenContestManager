@@ -1,4 +1,4 @@
-using HalloweenContestManager.Components;
+﻿using HalloweenContestManager.Components;
 using HalloweenContestManager.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +22,9 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddQuickGridEntityFrameworkAdapter();
-builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddDbContextFactory<ApplicationDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
 });
@@ -35,6 +37,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+    app.UseMigrationsEndPoint();
 }
 
 app.UseHttpsRedirection();

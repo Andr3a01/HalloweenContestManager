@@ -50,15 +50,19 @@
 
     private async Task Authenticate()
     {
-        var userAccount = appDbContext.UserAccounts.FirstOrDefault(u => u.UserName == Model.UserName);
-        if (userAccount is null || userAccount.Password != Model.Password)
+        var userAccount = appDbContext.UserAccounts.Include(x => x.Roles).FirstOrDefault(u => u.UserName == Model.UserName);
+        if (userAccount == null || userAccount.Password != Model.Password)
             errorMessage = "Invalid user name or password";
 
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, Model.UserName),
-            new Claim(ClaimTypes.Role, userAccount.Role),
         };
+
+        foreach(var role in userAccount.Roles)
+        {
+            claims.Add(new Claim(ClaimTypes.Role, role.RoleName));
+        }
 
         var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
         var principal = new ClaimsPrincipal(identity);

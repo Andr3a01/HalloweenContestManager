@@ -9,26 +9,28 @@
 <h1>Details</h1>
 
 <div>
-    <h2>UserAccount</h2>
-    <hr />
     @if (useraccount is null)
     {
+        <h2>User</h2>
+        <hr />
         <p><em>Loading...</em></p>
     }
     else {
+        <h2 >User <span class="border-1 text-info">@useraccount.UserName </span></h2>
+        <hr />
         <dl class="row">
             <dt class="col-sm-2">UserName</dt>
             <dd class="col-sm-10">@useraccount.UserName</dd>
             <dt class="col-sm-2">Password</dt>
-            <dd class="col-sm-10">@useraccount.Password</dd>
+            <dd class="col-sm-10">@GetHiddenPassword(useraccount.Password ?? "")</dd>
             <dt class="col-sm-2">Active</dt>
-            <dd class="col-sm-10">@useraccount.Active</dd>
+            <dd class="col-sm-10"> <input type="checkbox" checked='@useraccount.Active' disabled/></dd>
             <dt class="col-sm-2">LockedOut</dt>
-            <dd class="col-sm-10">@useraccount.LockedOut</dd>
+            <dd class="col-sm-10"><input type="checkbox" checked='@useraccount.LockedOut' disabled /></dd>
         </dl>
         <div>
-            <a href="@($"/useraccounts/edit?id={useraccount.Id}")">Edit</a> |
-            <a href="@($"/useraccounts")">Back to List</a>
+            <a class="btn btn-warning" href="@($"/useraccounts/edit?id={useraccount.Id}")">Edit</a> 
+            <a class="btn btn-outline-primary" href="@($"/useraccounts")"> Back to List</a>
         </div>
     }
 </div>
@@ -48,5 +50,14 @@
         {
             NavigationManager.NavigateTo("notfound");
         }
+    }
+
+    protected string GetHiddenPassword(string password)
+    {
+        var ret = string.Empty;
+        foreach (char c in password)
+            ret += "*";
+
+        return ret;
     }
 }

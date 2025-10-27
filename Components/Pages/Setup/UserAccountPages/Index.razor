@@ -11,19 +11,21 @@
 <h1>Index</h1>
 
 <p>
-    <a href="useraccounts/create">Create New</a>
+    <a class="btn btn-success" href="useraccounts/create">Create New</a>
 </p>
 
 <QuickGrid Class="table" Items="context.UserAccounts">
+    <TemplateColumn Context="useraccount">
+        <a class="btn btn-info" href="@($"useraccounts/details?id={useraccount.Id}")"><i class="bi bi-info-square text-white"></i></a>
+    </TemplateColumn>
     <PropertyColumn Property="useraccount => useraccount.UserName" />
     <PropertyColumn Property="useraccount => useraccount.Password" />
     <PropertyColumn Property="useraccount => useraccount.Active" />
     <PropertyColumn Property="useraccount => useraccount.LockedOut" />
 
     <TemplateColumn Context="useraccount">
-        <a href="@($"useraccounts/edit?id={useraccount.Id}")">Edit</a> |
-        <a href="@($"useraccounts/details?id={useraccount.Id}")">Details</a> |
-        <a href="@($"useraccounts/delete?id={useraccount.Id}")">Delete</a>
+        <a class="btn btn-warning" href="@($"useraccounts/edit?id={useraccount.Id}")">Edit</a> 
+        <a class="btn btn-danger" href="@($"useraccounts/delete?id={useraccount.Id}")">Delete</a>
     </TemplateColumn>
 </QuickGrid>
 
